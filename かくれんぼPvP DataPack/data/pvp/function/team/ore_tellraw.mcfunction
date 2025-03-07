@@ -1,0 +1,1 @@
+#execute if score match ◯ でそれぞれtellrawを追加
