@@ -5,6 +5,8 @@ team remove purple
 team remove green
 team remove aqua
 team remove gold
+team remove member
+team add member {"text":"参加者"}
 team add red {"text":"赤","color":"red"}
 team add blue {"text":"青","color":"blue"}
 team add yellow {"text":"黄色","color":"yellow"}
