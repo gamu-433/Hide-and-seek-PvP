@@ -1,0 +1,31 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:storage",
+        "storage": "minecraft:ore_random",
+        "path": "random6"
+      },
+      "range": {
+        "min": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "抽選値"
+          },
+          "score": "pvp_kouseki_k1"
+        },
+        "max": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "抽選値"
+          },
+          "score": "pvp_kouseki_k1"
+        }
+      }
+    }
+  ]
+}

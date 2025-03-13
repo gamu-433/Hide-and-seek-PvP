@@ -1,0 +1,187 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random6"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random5"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random4"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random3"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random2"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random1"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_advance"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "minecraft:ore_random",
+          "path": "random0"
+        },
+        "range": {
+          "min": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          },
+          "max": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "抽選値"
+            },
+            "score": "pvp_kouseki_k1"
+          }
+        }
+      }
+    ]
+  }
