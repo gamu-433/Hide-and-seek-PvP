@@ -3,7 +3,9 @@
 # スコアボード等定義
 scoreboard objectives remove pvp_advance
 scoreboard objectives remove pvp_kouseki_k1
+scoreboard objectives remove pvp_ore_team
 scoreboard objectives add pvp_advance dummy
+scoreboard objectives add pvp_ore_team dummy
 data merge storage ore {all:["鉄","銅","金","レッドストーン","エメラルド","ラピスラズリ","ダイヤモンド"]}
 
 # スコアボード設定
