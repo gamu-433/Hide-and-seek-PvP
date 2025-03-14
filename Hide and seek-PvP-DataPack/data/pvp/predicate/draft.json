@@ -145,7 +145,7 @@
               "type": "minecraft:fixed",
               "name": "抽選値"
             },
-            "score": "pvp_advance"
+            "score": "pvp_kouseki_k1"
           },
           "max": {
             "type": "minecraft:score",
