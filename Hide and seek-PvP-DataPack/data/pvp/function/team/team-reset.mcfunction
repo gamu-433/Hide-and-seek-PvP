@@ -1,32 +1,32 @@
-team remove red
-team remove blue
-team remove yellow
-team remove purple
-team remove green
-team remove aqua
+team remove redstone
+team remove lapis_lazuli
 team remove gold
+team remove iron
+team remove emerald
+team remove diamond
+team remove copper
 team remove member
 team remove gm
 team add gm {"text":"GM","color":"green"}
 team add member {"text":"参加者"}
-team add red {"text":"赤","color":"red"}
-team add blue {"text":"青","color":"blue"}
-team add yellow {"text":"黄色","color":"yellow"}
-team add purple {"text":"紫","color":"light_purple"}
-team add green {"text":"緑","color":"green"}
-team add aqua {"text":"水色","color":"aqua"}
-team add gold {"text":"オレンジ","color":"gold"}
-team modify red color red
-team modify blue color blue
-team modify yellow color yellow
-team modify purple color light_purple
-team modify green color green
-team modify aqua color aqua
-team modify gold color gold
-team modify red friendlyFire false
-team modify blue friendlyFire false
-team modify yellow friendlyFire false
-team modify purple friendlyFire false
-team modify green friendlyFire false
-team modify aqua friendlyFire false
+team add redstone {"text":"レッドストーン鉱石","color":"red"}
+team add lapis_lazuli {"text":"ラピスラズリ鉱石","color":"blue"}
+team add gold {"text":"金鉱石","color":"yellow"}
+team add iron {"text":"鉄鉱石","color":"white"}
+team add emerald {"text":"エメラルド鉱石","color":"drak_green"}
+team add diamond {"text":"ダイヤモンド鉱石","color":"aqua"}
+team add copper {"text":"銅鉱石","color":"gold"}
+team modify redstone color red
+team modify lapis_lazuli color blue
+team modify gold color yellow
+team modify iron color white
+team modify emerald color dark_green
+team modify diamond color aqua
+team modify copper color gold
+team modify redstone friendlyFire false
+team modify lapis_lazuli friendlyFire false
 team modify gold friendlyFire false
+team modify iron friendlyFire false
+team modify emerald friendlyFire false
+team modify diamond friendlyFire false
+team modify copper friendlyFire false

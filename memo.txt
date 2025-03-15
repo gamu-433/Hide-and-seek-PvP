@@ -3,6 +3,7 @@ ore
 []
 
 鉄","銅","金","レッドストーン","エメラルド","ラピスラズリ","ダイヤモンド　〇
+iron , copper , gold , redstone , emerald , lapis_lazuli , diamond
 左からスコア1
 
 本用のコマンド
