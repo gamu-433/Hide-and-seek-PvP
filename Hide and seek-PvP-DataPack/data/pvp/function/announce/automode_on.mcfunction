@@ -1,0 +1,3 @@
+scoreboard players set オート進行 pvp_advance 1
+tellraw @a[team=gm] [{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"["},{"bold":false,"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"GM"},{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"]　"},{"bold":true,"color":"white","text":"ゲームの自動進行を"},{"bold":true,"color":"green","text":"ON"},{"bold":true,"color":"white","text":"に設定しました。"}]
+execute as @a[team=gm] as @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 1.5

@@ -8,3 +8,8 @@ iron , copper , gold , redstone , emerald , lapis_lazuli , diamond
 
 本用のコマンド
 チーム抽選開始：go_ore
+自動進行：automode_on　automode_off
+
+進行(これもしかしたら状況検知あったほうがいいかも)
+フェーズ1実行：チーム決定-抽選？
+フェーズ2実行：lc_join.mcfunction

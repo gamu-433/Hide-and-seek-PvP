@@ -15,10 +15,10 @@ execute as @a at @s run playsound minecraft:entity.player.levelup master @s ~ ~ 
 tellraw @a [{"bold":true,"color":"white","text":"鉄鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=iron]"}]
 tellraw @a [{"bold":true,"color":"gold","text":"銅鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=copper]"}]
 tellraw @a [{"bold":true,"color":"yellow","text":"金鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=gold]"}]
-tellraw @a [{"bold":true,"color":"red","text":"レッドストーン鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"→→→　"},{"bold":false,"color":"white","selector":"@a[team=redstone]"}]
-tellraw @a [{"bold":true,"color":"dark_green","text":"エメラルド鉱石"},{"bold":true,"color":"white","text":"　チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=emerald]"}]
-tellraw @a [{"bold":true,"color":"blue","text":"ラピスラズリ鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=lapis_lazuli]"}]
-tellraw @a [{"bold":true,"color":"aqua","text":"ダイヤモンド鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=diamond]"}]
+tellraw @a [{"bold":true,"color":"red","text":"レッドストーン"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"→→→　"},{"bold":false,"color":"white","selector":"@a[team=redstone]"}]
+tellraw @a [{"bold":true,"color":"dark_green","text":"エメラルド"},{"bold":true,"color":"white","text":"　チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=emerald]"}]
+tellraw @a [{"bold":true,"color":"blue","text":"ラピスラズリ"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=lapis_lazuli]"}]
+tellraw @a [{"bold":true,"color":"aqua","text":"ダイヤモンド"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=diamond]"}]
 
 # execute if score 赤 pvp_advance matches 1 run tellraw @a [{"bold":true,"color":"white","text":"鉄鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=iron]"}]
 # execute if score 赤 pvp_advance matches 2 run tellraw @a [{"bold":true,"color":"gold","text":"銅鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=copper]"}]
@@ -82,3 +82,7 @@ execute as @a[team=member] if entity @s[team=redstone] run tellraw @s [{"bold":f
 execute as @a[team=member] if entity @s[team=emerald] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"dark_green","text":" エメラルド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
 execute as @a[team=member] if entity @s[team=lapis_lazuli] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"blue","text":" ラピスラズリ鉱石 "},{"bold":false,"color":"white","text":"でした"}]
 execute as @a[team=member] if entity @s[team=diamond] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"aqua","text":" ダイヤモンド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+
+scoreboard players set 状況 pvp_advance 3
+execute if score オート進行 pvp_advance matches 1 run schedule function pvp:announce/lc_join
+execute if score オート進行 pvp_advance matches 0 run tellraw @a[team=gm] [{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"["},{"bold":false,"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"GM"},{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"]　"},{"bold":true,"color":"white","hoverEvent":{"action":"show_text","value":""},"text":"フェーズ1終了。"},{"bold":true,"color":"white","text":"\n次に進む場合は"},{"bold":true,"color":"dark_red","text":"進行"},{"bold":true,"color":"white","text":"ページから"},{"bold":true,"color":"red","text":" フェーズ2 "},{"bold":true,"color":"white","text":"を実行してください！"}]
