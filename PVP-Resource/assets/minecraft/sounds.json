@@ -2,8 +2,8 @@
     "category": "master",
     "sounds": [
         {
-            "name": "sound_effects/Random_levelup"
+            "name": "sound_effects/random_levelup"
         }
-    ]
-}
+     ]
+    }
 }
