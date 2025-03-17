@@ -4,3 +4,4 @@ bossbar set minecraft:timer visible true
 scoreboard players add 内部タイマー pvp_advance 1
 execute store result bossbar minecraft:timer value run scoreboard players get タイマー pvp_advance
 execute if score 内部タイマー pvp_advance matches 20.. run function pvp:timer
+# この時点でアクションバー表示入れたいな

@@ -84,5 +84,5 @@ execute as @a[team=member] if entity @s[team=lapis_lazuli] run tellraw @s [{"bol
 execute as @a[team=member] if entity @s[team=diamond] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"aqua","text":" ダイヤモンド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
 
 scoreboard players set 状況 pvp_advance 3
-execute if score オート進行 pvp_advance matches 1 run schedule function pvp:announce/lc_join
+execute if score オート進行 pvp_advance matches 1 run schedule function pvp:announce/lc_join 15s replace
 execute if score オート進行 pvp_advance matches 0 run tellraw @a[team=gm] [{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"["},{"bold":false,"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"GM"},{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"]　"},{"bold":true,"color":"white","hoverEvent":{"action":"show_text","value":""},"text":"フェーズ1終了。"},{"bold":true,"color":"white","text":"\n次に進む場合は"},{"bold":true,"color":"dark_red","text":"進行"},{"bold":true,"color":"white","text":"ページから"},{"bold":true,"color":"red","text":" フェーズ2 "},{"bold":true,"color":"white","text":"を実行してください！"}]

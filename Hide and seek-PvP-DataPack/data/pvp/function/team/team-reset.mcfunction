@@ -13,7 +13,7 @@ team add redstone {"text":"レッドストーン鉱石","color":"red"}
 team add lapis_lazuli {"text":"ラピスラズリ鉱石","color":"blue"}
 team add gold {"text":"金鉱石","color":"yellow"}
 team add iron {"text":"鉄鉱石","color":"white"}
-team add emerald {"text":"エメラルド鉱石","color":"drak_green"}
+team add emerald {"text":"エメラルド鉱石","color":"dark_green"}
 team add diamond {"text":"ダイヤモンド鉱石","color":"aqua"}
 team add copper {"text":"銅鉱石","color":"gold"}
 team modify redstone color red

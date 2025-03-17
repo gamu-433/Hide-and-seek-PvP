@@ -7,6 +7,12 @@ scoreboard objectives remove pvp_ore_team
 bossbar remove minecraft:timer
 scoreboard objectives add pvp_advance dummy
 scoreboard objectives add pvp_ore_team dummy
+
+scoreboard objectives add PvP_xpbar dummy
+scoreboard objectives add PvP_Item_ore dummy
+scoreboard objectives add PvP_XPPoints dummy
+scoreboard objectives add PvP_XPLevels dummy
+
 data merge storage ore {all:["鉄","銅","金","レッドストーン","エメラルド","ラピスラズリ","ダイヤモンド"]}
 bossbar add timer "タイマー"
 
