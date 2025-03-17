@@ -10,7 +10,7 @@ scoreboard objectives remove pvp_kouseki_k1
 # execute as @a[team=gold] store result score @s pvp_ore_team run scoreboard players get オレンジ pvp_advance
 
 tellraw @a [{"bold":true,"color":"white","text":"============= "},{"bold":true,"color":"green","text":"所属チームが決定しました"},{"bold":true,"color":"white","text":" ============="}]
-execute as @a at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1
+execute as @a at @s run playsound minecraft:custom.levelup master @s ~ ~ ~ 1 1
 
 tellraw @a [{"bold":true,"color":"white","text":"鉄鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=iron]"}]
 tellraw @a [{"bold":true,"color":"gold","text":"銅鉱石"},{"bold":true,"color":"white","text":"チーム"},{"bold":true,"color":"gray","text":"　→→→　"},{"bold":false,"color":"white","selector":"@a[team=copper]"}]
