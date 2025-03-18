@@ -5,10 +5,10 @@ team remove iron
 team remove emerald
 team remove diamond
 team remove copper
-team remove member
+team remove spectator
 team remove gm
 team add gm {"text":"GM","color":"green"}
-team add member {"text":"参加者"}
+team add spectator {"text":"観戦者"}
 team add redstone {"text":"レッドストーン鉱石","color":"red"}
 team add lapis_lazuli {"text":"ラピスラズリ鉱石","color":"blue"}
 team add gold {"text":"金鉱石","color":"yellow"}

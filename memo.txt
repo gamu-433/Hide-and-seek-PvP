@@ -19,3 +19,5 @@ no_clear_item
 
 XPバー操作用scoreboard（最大値100）
 PvP_Item_ore
+
+#tema決定させてゲームスタートする処理の前にワールド再生成警告を出す。

@@ -4,14 +4,20 @@
 scoreboard objectives remove pvp_advance
 scoreboard objectives remove pvp_kouseki_k1
 scoreboard objectives remove pvp_ore_team
+scoreboard objectives remove PvP_Item_ore
+scoreboard objectives remove PvP_Item_ore2
+scoreboard objectives remove PvP_Item_ore3
 bossbar remove minecraft:timer
+
 scoreboard objectives add pvp_advance dummy
 scoreboard objectives add pvp_ore_team dummy
-
 scoreboard objectives add PvP_xpbar dummy
 scoreboard objectives add PvP_Item_ore dummy
+scoreboard objectives add PvP_Item_ore2 dummy
+scoreboard objectives add PvP_Item_ore3 dummy
 scoreboard objectives add PvP_XPPoints dummy
 scoreboard objectives add PvP_XPLevels dummy
+bossbar add minecraft:timer "a"
 
 data merge storage ore {all:["鉄","銅","金","レッドストーン","エメラルド","ラピスラズリ","ダイヤモンド"]}
 bossbar add timer "タイマー"

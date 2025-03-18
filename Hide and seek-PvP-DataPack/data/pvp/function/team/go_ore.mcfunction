@@ -5,3 +5,10 @@ tellraw @a {"text":"担当鉱石の抽選を行っています・・・","color"
 scoreboard players set 鉱石抽選 pvp_kouseki_k1 0
 function pvp:team/ore_random
 schedule function pvp:team/ore_output 3s replace
+execute as @a if entity @s[team=iron] run scoreboard players set @s pvp_advance 1
+execute as @a if entity @s[team=copper] run scoreboard players set @s pvp_advance 1
+execute as @a if entity @s[team=gold] run scoreboard players set @s pvp_advance 1
+execute as @a if entity @s[team=redstone] run scoreboard players set @s pvp_advance 1
+execute as @a if entity @s[team=emerald] run scoreboard players set @s pvp_advance 1
+execute as @a if entity @s[team=lapis_lazuli] run scoreboard players set @s pvp_advance 1
+execute as @a if entity @s[team=diamond] run scoreboard players set @s pvp_advance 1

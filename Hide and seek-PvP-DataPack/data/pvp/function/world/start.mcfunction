@@ -1,0 +1,4 @@
+tellraw @a[team=gm] [{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"["},{"bold":false,"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"GM"},{"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"このメッセージはGMのみに送信されています","color":"aqua"}]},"text":"]　"},{"bold":true,"color":"white","text":"ワールドの再生成を開始しました。"}]
+tellraw @a [{"color":"green","text":"✼••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈••"},{"color":"yellow","text":"Announce"},{"color":"green","text":"••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈••✼"},{"bold":true,"color":"white","text":"\nワールドの再生成が開始されました。"},{"bold":true,"color":"white","text":"\n再生成中は一時的に"},{"bold":true,"color":"red","text":"サーバーが重くなる"},{"bold":true,"color":"white","text":"場合があります。"}]
+execute as @a at @s run playsound minecraft:block.note_block.banjo master @s ~ ~ ~ 1 0.5
+schedule function pvp:world/delete 3s replace

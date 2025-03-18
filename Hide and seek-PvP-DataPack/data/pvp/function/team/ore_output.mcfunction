@@ -75,13 +75,13 @@ tellraw @a [{"bold":true,"color":"aqua","text":"ダイヤモンド"},{"bold":tru
 # execute if score オレンジ pvp_advance matches 6 run 
 # execute if score オレンジ pvp_advance matches 7 run 
 
-execute as @a[team=member] if entity @s[team=iron] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"white","text":" 鉄鉱石 "},{"bold":false,"color":"white","text":"でした"}]
-execute as @a[team=member] if entity @s[team=copper] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"gold","text":" 銅鉱石 "},{"bold":false,"color":"white","text":"でした"}]
-execute as @a[team=member] if entity @s[team=gold] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"yellow","text":" 金鉱石 "},{"bold":false,"color":"white","text":"でした"}]
-execute as @a[team=member] if entity @s[team=redstone] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"red","text":" レッドストーン鉱石 "},{"bold":false,"color":"white","text":"でした"}]
-execute as @a[team=member] if entity @s[team=emerald] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"dark_green","text":" エメラルド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
-execute as @a[team=member] if entity @s[team=lapis_lazuli] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"blue","text":" ラピスラズリ鉱石 "},{"bold":false,"color":"white","text":"でした"}]
-execute as @a[team=member] if entity @s[team=diamond] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"aqua","text":" ダイヤモンド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=iron] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"white","text":" 鉄鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=copper] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"gold","text":" 銅鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=gold] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"yellow","text":" 金鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=redstone] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"red","text":" レッドストーン鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=emerald] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"dark_green","text":" エメラルド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=lapis_lazuli] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"blue","text":" ラピスラズリ鉱石 "},{"bold":false,"color":"white","text":"でした"}]
+execute as @a if entity @s[team=diamond] run tellraw @s [{"bold":false,"color":"white","text":"\nあなたのチームの担当鉱石は"},{"bold":true,"color":"aqua","text":" ダイヤモンド鉱石 "},{"bold":false,"color":"white","text":"でした"}]
 
 scoreboard players set 状況 pvp_advance 3
 execute if score オート進行 pvp_advance matches 1 run schedule function pvp:announce/lc_join 15s replace
