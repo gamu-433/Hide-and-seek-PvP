@@ -7,16 +7,10 @@ execute store result bossbar minecraft:timer value run scoreboard players get �
 execute if score 内部タイマー pvp_advance matches 20.. run function pvp:timer
 function pvp:advance/actionbar
 execute as @a run function pvp:xp/main
-execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/iron
-execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/copper
-execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/gold
-execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/redstone
-execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/emerald
-execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/lapis_lazuli
+execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:iron_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/iron
+execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:copper_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/copper
+execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:gold_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/gold
+execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:redstone_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/redstone
+execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:emerald_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/emerald
+execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:lapis_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/lapis_lazuli
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/diamond
-# pvp_advance
-# 安地タイマー
-# 分：安地分　秒：安地秒
-
-
-# 参加人数：人数　生存人数：生存

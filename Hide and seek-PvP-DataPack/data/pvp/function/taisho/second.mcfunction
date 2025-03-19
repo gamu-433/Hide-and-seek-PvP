@@ -1,0 +1,11 @@
+tellraw @a {"text":"大将が決定しました！","color":"gold","bold":true}
+execute as @a at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 1
+tellraw @a[team=iron] [{"bold":true,"color":"white","text":"鉄鉱石"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=iron,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+tellraw @a[team=copper] [{"bold":true,"color":"gold","text":"銅鉱石"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=copper,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+tellraw @a[team=gold] [{"bold":true,"color":"yellow","text":"金鉱石"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=gold,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+tellraw @a[team=redstone] [{"bold":true,"color":"red","text":"レッドストーン"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=redstone,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+tellraw @a[team=emerald] [{"bold":true,"color":"dark_green","text":"エメラルド"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=emerald,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+tellraw @a[team=lapis_lazuli] [{"bold":true,"color":"blue","text":"ラピスラズリ"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=lapis_lazuli,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+tellraw @a[team=diamond] [{"bold":true,"color":"aqua","text":"ダイヤモンド"},{"bold":true,"color":"white","text":"-大将"},{"bold":true,"color":"gray","text":" →→→ "},{"bold":false,"color":"gold","selector":"@a[team=diamond,scores={pvp_advance=2}]"},{"bold":true,"color":"white","text":"さん"}]
+
+schedule function pvp:standby 15s replace
