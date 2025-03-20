@@ -3,15 +3,16 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:barrier"
     }
   },
   "pattern": [
-    "XXX",
-    "X X"
+    "   ",
+    " X ",
+    "   "
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:air"
+    "id": "minecraft:barrier"
   }
 }

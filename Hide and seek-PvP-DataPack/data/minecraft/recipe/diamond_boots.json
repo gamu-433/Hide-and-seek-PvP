@@ -3,15 +3,16 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:barrier"
     }
   },
   "pattern": [
-    "X X",
-    "X X"
+    "   ",
+    " X ",
+    "   "
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:air"
+    "id": "minecraft:barrier"
   }
 }

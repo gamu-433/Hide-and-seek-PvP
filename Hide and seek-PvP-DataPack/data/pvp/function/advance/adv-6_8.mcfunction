@@ -1,5 +1,5 @@
 # スタート直後開始
-bossbar set minecraft:timer name [{"bold":true,"color":"green","text":"戦闘開始！"},{"bold":true,"color":"yellow","text":"　制限時間"},{"bold":true,"color":"gray","text":"："},{"color":"aqua","score":{"name":"タイマー","objective":"pvp_advance"}}]
+bossbar set minecraft:timer name [{"bold":true,"color":"green","text":"戦闘開始！"},{"bold":true,"color":"yellow","text":"　制限時間"},{"bold":true,"color":"gray","text":"："},{"bold":false,"color":"aqua","score":{"name":"タイマー","objective":"pvp_advance"}}]
 bossbar set minecraft:timer players @a
 bossbar set minecraft:timer visible true
 scoreboard players add 内部タイマー pvp_advance 1

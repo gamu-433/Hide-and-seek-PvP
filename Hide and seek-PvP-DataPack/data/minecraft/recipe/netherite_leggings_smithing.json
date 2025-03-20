@@ -1,14 +1,14 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "minecraft:netherite_ingot"
+    "item": "minecraft:barrier"
   },
   "base": {
-    "item": "minecraft:diamond_leggings"
+    "item": "minecraft:barrier"
   },
   "result": {
     "count": 1,
-    "id": "minecraft:air"
+    "id": "minecraft:barrier"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"
