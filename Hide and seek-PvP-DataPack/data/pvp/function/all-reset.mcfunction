@@ -8,6 +8,7 @@ scoreboard objectives remove PvP_Item_ore
 scoreboard objectives remove PvP_Item_ore2
 scoreboard objectives remove PvP_Item_ore3
 bossbar remove minecraft:timer
+advancement revoke @a from pvp:int_click
 
 scoreboard objectives add pvp_advance dummy
 scoreboard objectives add pvp_ore_team dummy
@@ -17,6 +18,7 @@ scoreboard objectives add PvP_Item_ore2 dummy
 scoreboard objectives add PvP_Item_ore3 dummy
 scoreboard objectives add PvP_XPPoints dummy
 scoreboard objectives add PvP_XPLevels dummy
+forceload add 0 0 1 1
 bossbar add minecraft:timer "a"
 
 data merge storage ore {all:["鉄","銅","金","レッドストーン","エメラルド","ラピスラズリ","ダイヤモンド"]}
