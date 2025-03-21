@@ -10,3 +10,5 @@ execute if score 状況 pvp_advance matches 5 if score タイマー pvp_advance 
 # 状況6-9 - 戦闘中
 execute if score 状況 pvp_advance matches 6..9 run scoreboard players reset 内部タイマー pvp_advance
 execute if score 状況 pvp_advance matches 6..9 run scoreboard players remove タイマー pvp_advance 1
+execute if score 状況 pvp_advance matches 6..9 unless score 安地秒 pvp_advance matches ..-1 run scoreboard players remove 安地秒 pvp_advance 1
+execute if score 状況 pvp_advance matches 6..9 if score 安地秒 pvp_advance matches ..-1 run function pvp:timer2

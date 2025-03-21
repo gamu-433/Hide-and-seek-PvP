@@ -7,6 +7,24 @@ scoreboard objectives remove pvp_ore_team
 scoreboard objectives remove PvP_Item_ore
 scoreboard objectives remove PvP_Item_ore2
 scoreboard objectives remove PvP_Item_ore3
+kill @e[tag=chest1_1_1]
+kill @e[tag=chest1_1]
+kill @e[tag=chest1]
+kill @e[tag=chest2_1_1]
+kill @e[tag=chest2_1]
+kill @e[tag=chest2]
+kill @e[tag=chest3_1_1]
+kill @e[tag=chest3_1]
+kill @e[tag=chest3]
+kill @e[tag=chest4_1_1]
+kill @e[tag=chest4_1]
+kill @e[tag=chest4]
+kill @e[tag=chest5_1_1]
+kill @e[tag=chest5_1]
+kill @e[tag=chest5]
+kill @e[tag=chest6_1_1]
+kill @e[tag=chest6_1]
+kill @e[tag=chest6]
 bossbar remove minecraft:timer
 advancement revoke @a from pvp:int_click
 

@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:arrow] at @s on origin if entity @s[team=diamond] rotated as @p run fill ~2 ~ ~2 ~4 ~ ~4 minecraft:diamond_ore
