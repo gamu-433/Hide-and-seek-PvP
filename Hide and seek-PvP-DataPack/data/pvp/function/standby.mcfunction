@@ -9,6 +9,8 @@ execute store result score 人数 pvp_advance run tellraw @a[scores={pvp_advance
 scoreboard players operation 生存 pvp_advance = 人数 pvp_advance
 scoreboard players set 安地分 pvp_advance 5
 scoreboard players set 安地秒 pvp_advance 0
+execute as @a[scores={pvp_advance=1}] run attribute @s minecraft:generic.max_health base set 20
+execute as @a[scores={pvp_advance=2}] run attribute @s minecraft:generic.max_health base set 30
 execute in minecraft:pvp run gamerule keepInventory true
 execute in minecraft:pvp run gamerule doMobSpawning false
 effect give @a[scores={pvp_advance=1..2}] minecraft:saturation 60 1 true

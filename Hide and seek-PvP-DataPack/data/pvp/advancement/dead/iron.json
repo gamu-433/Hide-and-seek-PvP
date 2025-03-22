@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "kill1": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {
+          "player": {
+            "type": "minecraft:player",
+            "team": "iron"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "pvp:dead/iron"
+    }
+  }

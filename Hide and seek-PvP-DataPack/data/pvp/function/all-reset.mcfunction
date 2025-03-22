@@ -7,6 +7,13 @@ scoreboard objectives remove pvp_ore_team
 scoreboard objectives remove PvP_Item_ore
 scoreboard objectives remove PvP_Item_ore2
 scoreboard objectives remove PvP_Item_ore3
+scoreboard objectives remove PvP_points
+scoreboard objectives remove PvP_effect
+scoreboard objectives remove tpflame_id
+scoreboard objectives remove PvP_glowitem
+scoreboard objectives remove PvP_location
+advancement revoke @a everything
+execute as @a run attribute @s minecraft:generic.max_health base set 20
 kill @e[tag=chest1_1_1]
 kill @e[tag=chest1_1]
 kill @e[tag=chest1]
@@ -26,8 +33,14 @@ kill @e[tag=chest6_1_1]
 kill @e[tag=chest6_1]
 kill @e[tag=chest6]
 bossbar remove minecraft:timer
-advancement revoke @a from pvp:int_click
+recipe take @a *
+execute as @a unless entity @s[tag=no_clear_item] run clear @s
 
+scoreboard objectives add PvP_location dummy
+scoreboard objectives add PvP_glowitem minecraft.dropped:minecraft.ochre_froglight
+scoreboard objectives add tpflame_id dummy
+scoreboard objectives add PvP_effect dummy
+scoreboard objectives add PvP_points dummy
 scoreboard objectives add pvp_advance dummy
 scoreboard objectives add pvp_ore_team dummy
 scoreboard objectives add PvP_xpbar dummy

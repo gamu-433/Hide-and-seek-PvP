@@ -1,0 +1,1 @@
+execute as @a[scores={pvp_advance=1..2}] at @s if entity @s[scores={PvP_glowitem=1..}] run function pvp:item/glow

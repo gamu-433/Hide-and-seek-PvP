@@ -4,13 +4,19 @@ bossbar set minecraft:timer players @a
 bossbar set minecraft:timer visible true
 scoreboard players add 内部タイマー pvp_advance 1
 scoreboard players add チェストタイマー pvp_advance 1
+scoreboard players add 座標タイマー pvp_advance 1
 execute if score チェストタイマー pvp_advance matches 3600.. run function pvp:chest/chest_main
+execute if score 座標タイマー pvp_advance matches 6000.. run function pvp:location/main
 execute store result bossbar minecraft:timer value run scoreboard players get タイマー pvp_advance
 execute if score 内部タイマー pvp_advance matches 20.. run function pvp:timer
 execute if score 安地状態 pvp_advance matches 1 run function pvp:advance/actionbar
 execute if score 安地状態 pvp_advance matches 2..3 run function pvp:advance/actionbar2
 execute as @a run function pvp:xp/main
 execute if score チェストタイマー pvp_advance matches 3600.. run scoreboard players reset チェストタイマー pvp_advance
+execute if score 座標タイマー pvp_advance matches 6000.. run scoreboard players reset 座標タイマー pvp_advance
+execute as @a[scores={pvp_advance=1..2}] unless score @s PvP_effect matches ..0 run effect give @s minecraft:resistance 5 5 true
+execute as @a[scores={pvp_advance=1..2}] unless score @s PvP_effect matches ..0 run scoreboard players remove @s PvP_effect 1
+function pvp:item/main
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:iron_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/iron
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:copper_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/copper
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:gold_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/gold
