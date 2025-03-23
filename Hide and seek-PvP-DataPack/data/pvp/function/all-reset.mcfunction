@@ -12,6 +12,10 @@ scoreboard objectives remove PvP_effect
 scoreboard objectives remove tpflame_id
 scoreboard objectives remove PvP_glowitem
 scoreboard objectives remove PvP_location
+scoreboard objectives remove PvP_omen
+scoreboard objectives remove PvP_deathcount
+scoreboard objectives remove PvP_death_time
+scoreboard objectives remove PvP_fireball
 advancement revoke @a everything
 execute as @a run attribute @s minecraft:generic.max_health base set 20
 kill @e[tag=chest1_1_1]
@@ -36,6 +40,10 @@ bossbar remove minecraft:timer
 recipe take @a *
 execute as @a unless entity @s[tag=no_clear_item] run clear @s
 
+scoreboard objectives add PvP_death_time minecraft.custom:minecraft.time_since_death
+scoreboard objectives add PvP_deathcount deathCount
+scoreboard objectives add PvP_omen minecraft.dropped:minecraft.pitcher_pod
+scoreboard objectives add PvP_fireball minecraft.dropped:minecraft.fire_charge
 scoreboard objectives add PvP_location dummy
 scoreboard objectives add PvP_glowitem minecraft.dropped:minecraft.ochre_froglight
 scoreboard objectives add tpflame_id dummy

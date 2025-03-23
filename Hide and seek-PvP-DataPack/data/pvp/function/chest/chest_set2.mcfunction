@@ -7,6 +7,6 @@ execute if score 状況 pvp_advance matches 8..9 run execute in minecraft:pvp ru
 execute if score 状況 pvp_advance matches 10..11 run execute in minecraft:pvp run execute as @e[tag=chest2] run spreadplayers 0 0 10 100 true @s
 execute if score 状況 pvp_advance matches 12..13 run execute in minecraft:pvp run execute as @e[tag=chest2] run spreadplayers 0 0 10 50 true @s
 execute if score 状況 pvp_advance matches 14..15 run execute in minecraft:pvp run execute as @e[tag=chest2] run spreadplayers 0 0 10 25 true @s
-execute as @e[tag=chest2] at @s run setblock ~ ~ ~ minecraft:chest[facing=south]
+execute as @e[tag=chest2] at @s run setblock ~ ~ ~ chest[facing=south]{LootTable:"pvp:chest"}
 execute as @e[tag=chest2] at @s run tp @e[tag=chest2_1] ~1 ~ ~
 execute as @e[tag=chest2] at @s run summon interaction ~ ~-0.1 ~ {NoGravity:1b,Silent:1b,Glowing:1b,width:1.1f,height:1.1f,Tags:["chest2_1_1"]}

@@ -17,3 +17,4 @@ execute if score @s pvp_advance matches 2 run scoreboard players remove 生存 p
 execute if score @s pvp_advance matches 2 run scoreboard players set @s pvp_advance 3
 
 advancement revoke @s only pvp:dead/lapis_lazuli
+function pvp:ranking/main

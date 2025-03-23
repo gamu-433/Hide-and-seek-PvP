@@ -30,3 +30,4 @@ team modify iron friendlyFire false
 team modify emerald friendlyFire false
 team modify diamond friendlyFire false
 team modify copper friendlyFire false
+team modify spectator prefix {"text":"[観戦] ","color":"dark_aqua"}

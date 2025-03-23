@@ -16,3 +16,10 @@ execute in minecraft:pvp run gamerule doMobSpawning false
 effect give @a[scores={pvp_advance=1..2}] minecraft:saturation 60 1 true
 effect give @a[scores={pvp_advance=1..2}] minecraft:instant_health 60 1 true
 execute as @a[scores={pvp_advance=1..2}] at @s unless entity @s[tag=no_clear_item] run clear @s
+execute if entity @a[team=iron] run scoreboard players add 居残り順位 pvp_advance 1
+execute if entity @a[team=copper] run scoreboard players add 居残り順位 pvp_advance 1
+execute if entity @a[team=gold] run scoreboard players add 居残り順位 pvp_advance 1
+execute if entity @a[team=redstone] run scoreboard players add 居残り順位 pvp_advance 1
+execute if entity @a[team=lapis_lazuli] run scoreboard players add 居残り順位 pvp_advance 1
+execute if entity @a[team=emerald] run scoreboard players add 居残り順位 pvp_advance 1
+execute if entity @a[team=diamond] run scoreboard players add 居残り順位 pvp_advance 1

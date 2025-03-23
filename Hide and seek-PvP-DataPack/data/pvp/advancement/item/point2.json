@@ -1,0 +1,23 @@
+{
+    "criteria": {
+      "peper": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": {
+            "type": "minecraft:player"
+          },
+          "items": [
+            {
+              "items": "minecraft:paper",
+              "components": {
+                "minecraft:custom_data": "{point:2}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "pvp:item/point2"
+    }
+  }

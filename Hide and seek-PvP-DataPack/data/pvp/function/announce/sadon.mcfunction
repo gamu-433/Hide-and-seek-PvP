@@ -1,0 +1,2 @@
+execute as @a at @s run playsound minecraft:entity.wither.ambient master @s ~ ~ ~ 1 0.9
+tellraw @a [{"color":"green","text":"✼••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈••"},{"color":"yellow","text":"Announce"},{"color":"green","text":"••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈••✼"},{"bold":true,"color":"white","text":"\n制限時間が60秒を切りました。このまま0秒になった場合、"},{"bold":true,"color":"gold","text":"\nサドンデスモード"},{"bold":true,"color":"white","text":"に突入します。"},{"color":"white","text":"このモードでは"},{"bold":true,"color":"gold","text":"\n全員常時発光、Y30以下即脱落"},{"bold":true,"color":"white","text":"となります。"}]

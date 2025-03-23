@@ -1,227 +1,941 @@
 {
-    "type": "minecraft:chest",
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:end_portal_frame",
-            "weight": 50
-          },
-          {
-            "type": ""
-          }
-        ],
-        "conditions": [
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.2
-          }
-        ]
-      },
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:trial_key",
-            "functions": [
-              {
-                "function": "minecraft:set_name",
-                "name": {
-                  "text": "チェストの鍵",
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:trial_key",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "チェストの鍵",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_custom_model_data",
+              "value": 1
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
                   "type": "text",
-                  "color": "gold",
+                  "color": "white",
                   "bold": true,
                   "italic": false
                 },
-                "target": "item_name"
-              },
-              {
-                "function": "minecraft:set_custom_model_data",
-                "value": 1
-              },
-              {
-                "function": "minecraft:set_lore",
-                "lore": [
-                  {
-                    "text": "---------------------------",
-                    "type": "text",
-                    "extra": [],
-                    "color": "white",
-                    "bold": true,
-                    "italic": false
-                  },
-                  {
-                    "text": "物資補給チェストを開けるための鍵",
-                    "type": "text",
-                    "color": "aqua",
-                    "bold": true,
-                    "italic": false
-                  },
-                  {
-                    "text": "   "
-                  },
-                  {
-                    "text": "【入手方法】",
-                    "type": "text",
-                    "color": "white",
-                    "bold": true,
-                    "italic": false
-                  },
-                  {
-                    "text": "・物資補給チェストから入手する",
-                    "type": "text",
-                    "extra": [],
-                    "color": "green",
-                    "bold": false,
-                    "italic": false
-                  },
-                  {
-                    "text": "・プレイヤーをKILLする",
-                    "type": "text",
-                    "color": "green",
-                    "bold": false,
-                    "italic": false
-                  },
-                  {
-                    "text": "---------------------------",
-                    "type": "text",
-                    "color": "white",
-                    "bold": true,
-                    "italic": false
-                  }
-                ],
-                "mode": "append"
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.05
-          }
-        ]
-      },
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:golden_sword",
-            "functions": [
-              {
-                "function": "minecraft:set_damage",
-                "damage": {
-                  "type": "minecraft:uniform",
-                  "min": 30,
-                  "max": 26
-                }
-              },
-              {
-                "function": "minecraft:set_enchantments",
-                "enchantments": {
-                  "minecraft:sharpness": 5
+                {
+                  "text": "物資補給チェストを開けるための鍵",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
                 },
-                "conditions": []
+                {
+                  "text": "   "
+                },
+                {
+                  "text": "【入手方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・物資補給チェストから入手する",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "・プレイヤーをKILLする",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true
               }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.1
-          }
-        ]
-      },
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:bread",
-            "weight": 70,
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 3,
-                  "max": 6
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.05,
+                "max": 0.15
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:sharpness": 5
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bread",
+          "weight": 70,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_beef",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 8,
+                "max": 30
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.7
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 5,
+                "max": 30
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.9
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wind_charge",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.45
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_portal_frame",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "TPフレーム",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "使用するとランダムなプレイヤーと位置が入れ替わる",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "   "
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・その場に設置する",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ochre_froglight",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "発光石",
+                "type": "text",
+                "color": "yellow",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "使用すると自分以外のランダムなプレイヤーが発光する",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "   ",
+                  "type": "text"
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・その場に投げ捨てる",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_rod",
+          "weight": 35,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "フライドポテト(L)",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "某人気店〇ックのフライドポテトLサイズ",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "食べると空腹ゲージが全回復するぞ！",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "   ",
+                  "type": "text"
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・空腹時に食べる",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:food": {
+                  "nutrition": 99,
+                  "saturation": 99,
+                  "can_always_eat": false,
+                  "eat_seconds": 2
                 }
               }
-            ]
-          },
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:cooked_beef",
-            "weight": 30,
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 3,
-                  "max": 6
-                }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:fire_charge",
+          "weight": 35,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "ロケット弾",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
               }
-            ]
-          }
-        ]
-      },
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:arrow",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 8,
-                  "max": 30
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "向いている方向に火の弾を発射する",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "  "
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・その場に投げ捨てる",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
                 }
+              ],
+              "mode": "append"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pitcher_pod",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "盲目弾",
+                "type": "text",
+                "color": "gray",
+                "bold": true,
+                "italic": false
               }
-            ],
-            "conditions": []
-          }
-        ],
-        "conditions": [
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.7
-          }
-        ]
-      },
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:snowball",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 5,
-                  "max": 30
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "使用すると自分以外の半径3ブロックにいる",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "プレイヤーを5秒間盲目状態にさせる。",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "    ",
+                  "type": "text"
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・その場に投げ捨てる",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
                 }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:speed",
+                      "amplifier": 1,
+                      "duration": 1200,
+                      "ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                },
+                "minecraft:enchantment_glint_override": true
               }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.9
-          }
-        ]
-      }
-    ]
-  }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "俊敏のポーション",
+                "type": "text",
+                "color": "blue",
+                "bold": false,
+                "italic": false
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "攻撃力上昇のポーション",
+                "type": "text",
+                "color": "blue",
+                "bold": false,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 12460835,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:strength",
+                      "amplifier": 0,
+                      "duration": 1200,
+                      "ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                },
+                "minecraft:enchantment_glint_override": true
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "ポイント獲得券 (+1)",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "使用すると1ポイントを獲得できる",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "  ",
+                  "type": "text"
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・所持した瞬間自動的に使用",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{point:1}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "ポイント獲得券 (+2)",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "使用すると2ポイントを獲得できる",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "  ",
+                  "type": "text"
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・所持した瞬間自動的に使用",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{point:2}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "ポイント獲得券 (+3)",
+                "type": "text",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "使用すると3ポイントを獲得できる",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "  ",
+                  "type": "text"
+                },
+                {
+                  "text": "【使用方法】",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                },
+                {
+                  "text": "・所持した瞬間自動的に使用",
+                  "type": "text",
+                  "color": "green",
+                  "bold": false,
+                  "italic": false
+                },
+                {
+                  "text": "-----------------------",
+                  "type": "text",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{point:3}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.2
+        }
+      ]
+    }
+  ]
+}
