@@ -8,3 +8,4 @@ give @s trial_key[custom_name='{"bold":true,"color":"gold","italic":false,"text"
 tellraw @s [{"text":"チェストの鍵","color":"gold","bold":true},{"text":"を入手した！","color":"white","bold":true}]
 
 advancement revoke @s only pvp:kill/iron
+scoreboard players add @s PvP_kill 1

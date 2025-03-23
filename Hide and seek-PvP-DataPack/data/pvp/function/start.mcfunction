@@ -12,7 +12,7 @@ scoreboard players set 安地状態 pvp_advance 1
 recipe take @a *
 execute as @a at @s run playsound minecraft:custom.levelup master @s ~ ~ ~ 1 0
 title @a title {"text":"PvP Start!!","color":"gold","bold":true}
-execute as @a[scores={pvp_advance=1..2}] run function pvp:give_item
+function pvp:give_item
 gamemode survival @a[scores={pvp_advance=1..2}]
 execute in minecraft:pvp as @a[team=iron,scores={pvp_advance=1}] run tp @s @a[team=iron,scores={pvp_advance=2},limit=1]
 execute in minecraft:pvp as @a[team=copper,scores={pvp_advance=1}] run tp @s @a[team=copper,scores={pvp_advance=2},limit=1]
@@ -22,3 +22,11 @@ execute in minecraft:pvp as @a[team=lapis_lazuli,scores={pvp_advance=1}] run tp 
 execute in minecraft:pvp as @a[team=emerald,scores={pvp_advance=1}] run tp @s @a[team=emerald,scores={pvp_advance=2},limit=1]
 execute in minecraft:pvp as @a[team=diamond,scores={pvp_advance=1}] run tp @s @a[team=diamond,scores={pvp_advance=2},limit=1]
 execute in minecraft:pvp as @a[team=spectator] run tp @s @r[scores={pvp_advance=1..2},limit=1]
+
+execute unless entity @a[team=iron] run scoreboard players set 鉄居残り pvp_advance 1
+execute unless entity @a[team=copper] run scoreboard players set 銅居残り pvp_advance 1
+execute unless entity @a[team=gold] run scoreboard players set 金居残り pvp_advance 1
+execute unless entity @a[team=redstone] run scoreboard players set レッドストーン居残り pvp_advance 1
+execute unless entity @a[team=emerald] run scoreboard players set エメラルド居残り pvp_advance 1
+execute unless entity @a[team=lapis_lazuli] run scoreboard players set ラピスラズリ居残り pvp_advance 1
+execute unless entity @a[team=diamond] run scoreboard players set ダイヤモンド居残り pvp_advance 1

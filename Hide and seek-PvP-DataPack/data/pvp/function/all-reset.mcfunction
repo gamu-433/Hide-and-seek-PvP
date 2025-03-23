@@ -16,6 +16,7 @@ scoreboard objectives remove PvP_omen
 scoreboard objectives remove PvP_deathcount
 scoreboard objectives remove PvP_death_time
 scoreboard objectives remove PvP_fireball
+scoreboard objectives remove PvP_kill
 advancement revoke @a everything
 execute as @a run attribute @s minecraft:generic.max_health base set 20
 kill @e[tag=chest1_1_1]
@@ -40,6 +41,7 @@ bossbar remove minecraft:timer
 recipe take @a *
 execute as @a unless entity @s[tag=no_clear_item] run clear @s
 
+scoreboard objectives add PvP_kill dummy
 scoreboard objectives add PvP_death_time minecraft.custom:minecraft.time_since_death
 scoreboard objectives add PvP_deathcount deathCount
 scoreboard objectives add PvP_omen minecraft.dropped:minecraft.pitcher_pod

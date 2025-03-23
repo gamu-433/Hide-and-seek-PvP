@@ -13,8 +13,8 @@ execute as @a[scores={pvp_advance=1}] run attribute @s minecraft:generic.max_hea
 execute as @a[scores={pvp_advance=2}] run attribute @s minecraft:generic.max_health base set 30
 execute in minecraft:pvp run gamerule keepInventory true
 execute in minecraft:pvp run gamerule doMobSpawning false
-effect give @a[scores={pvp_advance=1..2}] minecraft:saturation 60 1 true
-effect give @a[scores={pvp_advance=1..2}] minecraft:instant_health 60 1 true
+effect give @a[scores={pvp_advance=1..2}] minecraft:saturation 1200 1 true
+effect give @a[scores={pvp_advance=1..2}] minecraft:instant_health 1200 1 true
 execute as @a[scores={pvp_advance=1..2}] at @s unless entity @s[tag=no_clear_item] run clear @s
 execute if entity @a[team=iron] run scoreboard players add 居残り順位 pvp_advance 1
 execute if entity @a[team=copper] run scoreboard players add 居残り順位 pvp_advance 1
@@ -23,3 +23,6 @@ execute if entity @a[team=redstone] run scoreboard players add 居残り順位 p
 execute if entity @a[team=lapis_lazuli] run scoreboard players add 居残り順位 pvp_advance 1
 execute if entity @a[team=emerald] run scoreboard players add 居残り順位 pvp_advance 1
 execute if entity @a[team=diamond] run scoreboard players add 居残り順位 pvp_advance 1
+execute in minecraft:pvp run forceload add 0 0 0 0
+execute in minecraft:pvp run time set day
+execute in minecraft:pvp run weather clear
