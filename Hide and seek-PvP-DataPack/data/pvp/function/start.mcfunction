@@ -21,4 +21,4 @@ execute in minecraft:pvp as @a[team=redstone,scores={pvp_advance=1}] run tp @s @
 execute in minecraft:pvp as @a[team=lapis_lazuli,scores={pvp_advance=1}] run tp @s @a[team=lapis_lazuli,scores={pvp_advance=2},limit=1]
 execute in minecraft:pvp as @a[team=emerald,scores={pvp_advance=1}] run tp @s @a[team=emerald,scores={pvp_advance=2},limit=1]
 execute in minecraft:pvp as @a[team=diamond,scores={pvp_advance=1}] run tp @s @a[team=diamond,scores={pvp_advance=2},limit=1]
-
+execute in minecraft:pvp as @a[team=spectator] run tp @s @r[scores={pvp_advance=1..2},limit=1]
