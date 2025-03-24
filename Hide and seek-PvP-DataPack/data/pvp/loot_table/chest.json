@@ -103,14 +103,14 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_sword",
+          "name": "minecraft:iron_sword",
           "functions": [
             {
               "function": "minecraft:set_damage",
               "damage": {
                 "type": "minecraft:uniform",
-                "min": 0.05,
-                "max": 0.15
+                "min": 0.005,
+                "max": 0.022
               }
             },
             {
@@ -202,6 +202,12 @@
                 "type": "minecraft:uniform",
                 "min": 5,
                 "max": 30
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:max_stack_size": 64
               }
             }
           ]

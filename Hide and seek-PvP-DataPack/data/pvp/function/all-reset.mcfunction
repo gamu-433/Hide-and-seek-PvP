@@ -39,6 +39,7 @@ kill @e[tag=chest6_1]
 kill @e[tag=chest6]
 bossbar remove minecraft:timer
 recipe take @a *
+execute in minecraft:overworld run gamerule fallDamage false
 execute as @a unless entity @s[tag=no_clear_item] run clear @s
 
 scoreboard objectives add PvP_kill dummy
@@ -71,6 +72,6 @@ scoreboard players set 状況 pvp_advance 0
 scoreboard players set タイマー pvp_advance 0
 scoreboard players set 鉱石抽選 pvp_advance 0
 
-# 最後に追加する　function pvp:team/team-reset
+function pvp:team/team-reset
 
 

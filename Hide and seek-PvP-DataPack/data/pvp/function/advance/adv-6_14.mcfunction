@@ -27,3 +27,4 @@ execute as @a[team=emerald] if entity @s[nbt={SelectedItem:{id:"minecraft:emeral
 execute as @a[team=lapis_lazuli] if entity @s[nbt={SelectedItem:{id:"minecraft:lapis_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/lapis_lazuli
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/diamond
 execute if score 居残り順位 pvp_advance matches 1 run function pvp:ending
+kill @e[type=arrow,nbt={inGround:1b}]
