@@ -1,3 +1,4 @@
+scoreboard players reset @a PvP_deathcount
 scoreboard players set 状況 pvp_advance 6
 bossbar set minecraft:timer color red
 bossbar set minecraft:timer max 1800

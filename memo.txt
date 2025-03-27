@@ -33,3 +33,6 @@ PvP_Item_ore
 
 懸念
 sado.y30
+
+仕様
+spread 半径　border　直径
