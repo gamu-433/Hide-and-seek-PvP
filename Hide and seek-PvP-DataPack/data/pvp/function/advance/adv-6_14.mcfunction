@@ -18,6 +18,7 @@ execute if score 座標タイマー pvp_advance matches 6000.. run scoreboard pl
 execute as @a[scores={pvp_advance=1..2}] unless score @s PvP_effect matches ..0 run effect give @s minecraft:resistance 5 5 true
 execute as @a[scores={pvp_advance=1..2}] unless score @s PvP_effect matches ..0 run scoreboard players remove @s PvP_effect 1
 execute as @a[scores={pvp_advance=1}] if entity @s[scores={PvP_deathcount=1..}] run function pvp:death
+execute as @a[scores={pvp_advance=1..2}] at @s if entity @s[scores={death_main=1..}] run function pvp:dead/main
 function pvp:item/main
 execute as @a[team=iron] if entity @s[nbt={SelectedItem:{id:"minecraft:iron_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/iron
 execute as @a[team=copper] if entity @s[nbt={SelectedItem:{id:"minecraft:copper_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/copper

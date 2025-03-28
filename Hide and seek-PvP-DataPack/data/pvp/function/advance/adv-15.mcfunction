@@ -21,6 +21,7 @@ execute as @a[scores={pvp_advance=1..2}] unless score @s PvP_effect matches ..0 
 execute as @a[scores={pvp_advance=1}] if entity @s[scores={PvP_deathcount=1..}] run function pvp:death
 function pvp:item/main
 effect give @a[scores={pvp_advance=1..2}] minecraft:glowing 30 1 true
+execute as @a[scores={pvp_advance=1..2}] at @s if entity @s[scores={death_main=1..}] run function pvp:dead/main
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:iron_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/iron
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:copper_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/copper
 execute as @a[team=diamond] if entity @s[nbt={SelectedItem:{id:"minecraft:gold_ore"}}] unless score @s PvP_Item_ore matches ..0 run function pvp:ore/gold

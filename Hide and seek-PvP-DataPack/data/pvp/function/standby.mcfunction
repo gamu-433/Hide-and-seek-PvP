@@ -23,6 +23,8 @@ execute if entity @a[team=redstone] run scoreboard players add 居残り順位 p
 execute if entity @a[team=lapis_lazuli] run scoreboard players add 居残り順位 pvp_advance 1
 execute if entity @a[team=emerald] run scoreboard players add 居残り順位 pvp_advance 1
 execute if entity @a[team=diamond] run scoreboard players add 居残り順位 pvp_advance 1
+scoreboard players reset @a death_main
+advancement revoke @a everything
 execute in minecraft:pvp run forceload add 0 0 0 0
 execute in minecraft:pvp run time set day
 execute in minecraft:pvp run weather clear
