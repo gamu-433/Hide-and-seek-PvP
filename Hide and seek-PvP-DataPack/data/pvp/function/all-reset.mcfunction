@@ -18,6 +18,8 @@ scoreboard objectives remove PvP_death_time
 scoreboard objectives remove PvP_fireball
 scoreboard objectives remove PvP_kill
 scoreboard objectives remove death_main
+scoreboard objectives remove PvP_40
+
 advancement revoke @a everything
 execute as @a run attribute @s minecraft:generic.max_health base set 20
 kill @e[tag=chest1_1_1]
@@ -43,6 +45,7 @@ recipe take @a *
 execute in minecraft:overworld run gamerule fallDamage false
 execute as @a unless entity @s[tag=no_clear_item] run clear @s
 
+scoreboard objectives add PvP_40 dummy
 scoreboard objectives add death_main deathCount
 scoreboard objectives add PvP_kill dummy
 scoreboard objectives add PvP_death_time minecraft.custom:minecraft.time_since_death

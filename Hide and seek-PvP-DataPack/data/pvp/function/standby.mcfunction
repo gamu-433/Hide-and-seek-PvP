@@ -28,3 +28,5 @@ advancement revoke @a everything
 execute in minecraft:pvp run forceload add 0 0 0 0
 execute in minecraft:pvp run time set day
 execute in minecraft:pvp run weather clear
+
+execute as @a at @s unless entity @s[team=iron] unless entity @s[team=gm] unless entity @s[team=copper] unless entity @s[team=gold] unless entity @s[team=redstone] unless entity @s[team=emerald] unless entity @s[team=lapis_lazuli] unless entity @s[team=diamond] run team join spectator @s
