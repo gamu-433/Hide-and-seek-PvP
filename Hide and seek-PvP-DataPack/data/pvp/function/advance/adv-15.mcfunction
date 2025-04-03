@@ -33,3 +33,4 @@ execute as @a[scores={pvp_advance=1..2}] if entity @s[y=30,dy=-30] run kill @s
 execute if score 居残り順位 pvp_advance matches 1 run function pvp:ending
 kill @e[type=arrow,nbt={inGround:1b}]
 execute as @a[scores={pvp_advance=1..2}] at @s if entity @s[y=40,dy=-100] run effect give @s minecraft:glowing 5 1 true
+function pvp:ore/recovery
